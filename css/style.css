@@ -83,7 +83,7 @@ header{
     top:0; left:0;
     z-index: 1000;
     height:100%;
-    width:35rem;
+    width:25rem;
     background:#1a1a1a;
     display: flex;
     align-items: center;
@@ -133,4 +133,45 @@ header .navbar ul li a{
 
 header .navbar ul li a:hover{
     background:var(--yellow);
+}
+#menu{
+    position: fixed;
+    top:2rem; right:2rem;
+    background:#333;
+    color:#fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding:1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+@media (max-width:1200px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .home{
+        padding:1rem 4rem;
+    }
+
+}
+
+@media (max-width:991px){
+
+   header{
+       left:-120%;
+   }
+
+   #menu{
+       display: block;
+   }
+   header.toggle{
+    left:0%;
+   }
+
+   body{
+       padding:0;
+   }
+
 }
